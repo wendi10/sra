@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Canela';
+    src: url('./assets/fonts/canela.ttf');
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    src: url('./assets/fonts/Sarabun-ThinItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Sharpe';
+    src: url('./assets/fonts/Sharpe.ttf');
+}
+
+@font-face {
+    font-family: 'Sharpe-li';
+    src: url('./assets/fonts/Sharpe-li.ttf');
+}
+
+@font-face {
+    font-family: 'TimesNewRoman';
+    src: url('./assets/fonts/times.ttf');
+}
+
+@font-face {
+    font-family: 'TT-Chocolate';
+    src: url('./assets/fonts/TT\ Chocolates\ Trial\ Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TT-Chocolate-bold';
+    src: url('./assets/fonts/TT\ Chocolates\ Trial\ Bold.otf') format('opentype');
+}
+
+html{
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: #DFDDDC!important;
+}
+
+
+
+@media screen and (min-device-width: 768px)
+    and (max-device-width: 1024px) {
+        html{
+            font-size: 1rem!important;
+        }
+}
+
+@media screen and (min-device-width: 480px)
+    and (max-device-width: 768px) {
+        html{
+            font-size: 0.75rem !important;
+        }
+}

@@ -1,0 +1,33 @@
+<div class="Home">
+  <app-header *ngIf="isMobile"></app-header>
+  <div class="section">
+    <app-landing></app-landing>
+  </div>
+  <div>
+    <app-header *ngIf="!isMobile"></app-header>
+
+    <div class="section" id="welcome">
+      <app-welcome-section></app-welcome-section>
+    </div>
+
+    <div class="section" id="category">
+      <app-product-category></app-product-category>
+    </div>
+
+    <div class="section" id="promotions">
+      <app-promotions></app-promotions>
+    </div>
+
+    <div class="section" id="know-us">
+      <app-know-us></app-know-us>
+    </div>
+
+    <div class="section" id="vision-mision">
+      <app-vision-mision></app-vision-mision>
+    </div>
+
+    <div class="section" id="about-us">
+      <app-about-us></app-about-us>
+    </div>
+  </div>
+</div>

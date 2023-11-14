@@ -1,0 +1,55 @@
+<div class="product-detail">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+
+  <div class="content">
+    <div class="img-courosel">
+      <ngb-carousel
+        *ngIf="productDetail?.media"
+        [animation]="false"
+        [showNavigationArrows]="true"
+        [showNavigationIndicators]="true"
+        [interval]="5000"
+      >
+        <ng-template
+          *ngFor="let img of productDetail?.media; let idx = index"
+          ngbSlide
+        >
+          <img [src]="img.url" [alt]="productDetail.name + idx" />
+        </ng-template>
+      </ngb-carousel>
+    </div>
+
+    <div class="detail">
+      <h3 class="title">{{ productDetail.name }}</h3>
+
+      <p class="desc mb-3">
+        <i>{{ productDetail.description }}</i>
+      </p>
+      <p class="benefit"><b>Benefits</b>:</p>
+      <p class="desc">
+        <i>{{ productDetail.benefit }}</i>
+      </p>
+      <hr />
+      <p class="benefit"><b>Ingredients</b>:</p>
+      <p class="desc mb-5">
+        <i>{{ productDetail.ingredients || "" }}</i>
+      </p>
+
+      <h3 class="price">
+        {{ productDetail.price | currency : "Rp " : "symbol" : "3.0" }}
+      </h3>
+    </div>
+
+    <a
+      [routerLink]="['/products']"
+      [queryParams]="{
+        categoryId: productDetail?.category?.id,
+        categoryName: productDetail?.category?.name
+      }"
+      class="back-to-previous mb-3"
+      ><i>< Back to Recent Page</i></a
+    >
+  </div>
+</div>

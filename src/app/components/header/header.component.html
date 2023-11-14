@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="d-flex flex-row align-items-center">
+    <img class="" src="../../../assets/images/logo.png" />
+
+    <div class="d-flex flex-row align-items-center justify-content-end w-100">
+      <a href="#welcome" class="menu">HOME</a>
+      <a href="#category" class="menu">PRODUCTS</a>
+      <a href="#know-us" class="menu">ABOUT US</a>
+      <a href="#promotions" class="menu">PROMOTIONS</a>
+    </div>
+  </div>
+
+  <input
+    [(ngModel)]="isChecked"
+    type="checkbox"
+    class="openSidebarMenu"
+    id="openSidebarMenu"
+  />
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <div class="main-content-wrapper">
+      <a (click)="onClickMenu()" href="#welcome">HOME</a>
+      <a (click)="onClickMenu()" href="#category">PRODUCTS</a>
+      <a (click)="onClickMenu()" href="#know-us">ABOUT US</a>
+      <a (click)="onClickMenu()" href="#promotions">PROMOTIONS</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+.product-by-category {
+    .section {
+        height: 100vh;
+        border: 1px solid black;
+    }
+
+    .categoryImg{
+        max-width: 450px;
+    }
+
+    .header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: transparent;
+        z-index: 100;
+    }
+
+    .title {
+        font-size: 4.375rem;
+        color: #ABA780;
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        font-family: Canela;
+    }
+
+    .content-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        display: flex;
+        width: 60%;
+    }
+
+    .back-to-previous {
+        font-size: 0.75rem;
+        color: #ABA780;
+        text-decoration: underline;
+        margin: 4rem;
+        position: fixed;
+        bottom: 10%;
+        left: 2rem;
+    }
+
+    ::ng-deep .carousel-indicators li {
+        background-color: transparent;
+        border:1px solid#ABA780; 
+        width: 1.5rem; 
+        height: 0.5rem; 
+        border-radius: 1rem; 
+        margin: 0.1rem;
+    }
+    ::ng-deep .carousel-indicators li.active {
+        background-color: #ABA780;
+        width: 1.5rem; 
+        height: 0.5rem; 
+        border-radius: 1rem; 
+        margin: 0.1rem;
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    ::ng-deep .product-card {
+        width: 100% !important;
+        padding: 2rem 5rem !important;
+    }
+
+    .product-by-category {
+        .section {
+            height: auto;
+            border: none;
+        }
+
+        .categoryImg{
+            max-width: 350px;
+        }
+
+        .header {
+            display: none;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #ABA780;
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            font-family: Canela;
+        }
+
+        .content-container {
+            display: block;
+            justify-content: center;
+        }
+
+        .content {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .back-to-previous {
+            font-size: 0.75rem;
+            color: #ABA780;
+            text-decoration: underline;
+            margin: 1rem;
+        }
+    }
+}

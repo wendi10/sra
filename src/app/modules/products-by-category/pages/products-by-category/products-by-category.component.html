@@ -1,0 +1,31 @@
+<div class="product-by-category">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+
+  <!-- <h1 class="title">{{ categoryName.toUpperCase() }}</h1> -->
+  <div class="d-flex justify-content-center">
+    <img class="categoryImg" [src]="categoryImg" />
+  </div>
+
+  <ngb-carousel
+    *ngIf="products"
+    [interval]="0"
+    [animation]="false"
+    [showNavigationArrows]="true"
+    [showNavigationIndicators]="true"
+  >
+    <ng-template *ngFor="let arrayOfProduct of products" ngbSlide>
+      <div class="content-container mb-5">
+        <div class="content">
+          <app-product-card
+            *ngFor="let product of arrayOfProduct"
+            [product]="product"
+          ></app-product-card>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <a routerLink="/" class="back-to-previous"><i>< Back to Home Page</i></a>
+</div>

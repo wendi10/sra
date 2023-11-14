@@ -1,0 +1,51 @@
+.home{
+    width: 100%;
+    overflow-x: unset;
+    .title{
+        font-size: 4rem;
+        color: #ABA780;
+        text-align: center;
+    }
+}
+
+.section{ 
+    height: 100vh;
+    width: 100%;
+    border: 1px solid #DFDDDC;
+}
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.footer{
+    display: none;
+}
+
+@media screen and (max-width: 1350px) {
+    .left-content{
+        width: 100%;
+    }
+
+    .section{
+        height: auto;
+        border: none;
+    }
+
+    .right-content{
+        width: 100%;
+    }
+
+    .header{
+        display: block;
+    }
+
+    .footer{
+        display: block;
+        z-index: 100;
+    }
+  }

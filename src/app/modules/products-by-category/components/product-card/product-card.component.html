@@ -1,0 +1,7 @@
+<div (click)="onClickProduct()" class="product-card">
+  <img [src]="product.media[0].url" />
+  <h3 class="title">{{ product.name }}</h3>
+  <h3 class="price">
+    {{ product.price | currency : "Rp " : "symbol" : "3.0" }}
+  </h3>
+</div>
