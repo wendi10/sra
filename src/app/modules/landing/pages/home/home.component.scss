@@ -8,19 +8,19 @@
     }
 }
 
-.section{ 
+.parent {
+    overflow-y: scroll;
     height: 100vh;
-    width: 100%;
-    border: 1px solid #DFDDDC;
-}
-
-.header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: transparent;
-    z-index: 100;
-}
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
 
 .footer{
     display: none;
@@ -36,12 +36,16 @@
         border: none;
     }
 
+    .parent {
+        overflow-y: none;
+        height: none;
+        scroll-snap-points-y: inherit;
+        scroll-snap-type: none;
+        scroll-behavior: smooth;
+      }
+
     .right-content{
         width: 100%;
-    }
-
-    .header{
-        display: block;
     }
 
     .footer{

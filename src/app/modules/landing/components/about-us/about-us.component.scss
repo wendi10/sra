@@ -5,81 +5,13 @@
 
     .content-left{
         position: relative;
-        width: 60%;
+        width: 45%;
         display:flex;
         flex-direction: column;
-        margin: 20% auto 0 auto;
-        text-align: center;
-
-        .title{
-            font-size: 2.625rem;
-            font-family: sharpe;
-            color: #ABA780;
-            margin-bottom: 2rem;
-        }
-
-        .sub-title{
-            font-size: 22px;
-            font-family: Sharpe;
-            color: #737373;
-
-            .gold{
-                color: #ABA780!important;
-                font-size: 22px;
-                font-family: Sharpe;
-                margin-top: 4rem;
-            }
-        }
-
-        .icon{
-            width: 60px;
-        }
-
-        .description{ 
-            font-size: 11px;
-            color: #737373;
-            font-family: TT-Chocolate;
-        }
-
-        .footer{
-            position: absolute;
-            bottom: 0;
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            color: #737373;
-
-            .left{
-                padding: 1rem;
-                margin: 1rem;
-                font-family: TT-Chocolate;
-                
-
-                h6{
-                    font-size: 11px;
-                    font-weight: 400;
-                    margin: 0;
-                    text-align: left;
-                }
-
-                .email{
-                    font-size: 11px;
-                    font-weight: 400;
-                    margin: 0;
-                    text-align: left;
-                }
-            }
-
-            .right{
-                margin-top: 4rem;
-                margin-right: 2rem;
-            }
-        }
-    }
-
-    .content-right{
-        position: relative;
-        width: 40%;
+        // margin: 20% auto 0 auto;
+        text-align: left;
+        background-color: #82b440;
+        padding: 24px;
 
         img{
             position: absolute;
@@ -87,87 +19,109 @@
             bottom: 0;
             right: 0;
         }
+
+        .title{
+            font-size: 40px;
+            font-family: TT-Chocolate-bold;
+            color: #737373;
+            font-weight: 700;
+            margin-top: 10%;
+        }
+
+        .description{ 
+            font-size: 20px;
+            color: #fff;
+            font-family: TT-Chocolate;
+            margin-bottom: 6px;
+        }
+
+        .button-learn-more {
+            padding: 12px;
+            background-color: #fff;
+            font-size: 24px;
+            color: #ed2b45;
+            border: 2px solid #ed2b45;
+            border-radius: 12px;
+            width: 180px;
+        }
+    }
+
+    .content-right{
+        position: relative;
+        width: 55%;
+        overflow: hidden;
+
+        img {
+            width: 100%; /* Make the image width 100% of the container width */
+            height: 100%; /* Make the image height 100% of the container height */
+            object-fit: cover; /* Preserve the aspect ratio and cover the entire container */
+            display: block; /* Remove extra space below the image */
+          }
     }
 }
 
 @media screen and (max-width: 1350px) {
     .about-us {
         height: auto;
-        display: block;
-        justify-content: space-between;
-        width: 100%;
+        display: inline-block;
+        // justify-content: space-between;
     
         .content-left{
-            position: initial;
+            position: relative;
             width: 100%;
-            display: block;
-            text-align: center;
+            display:inline-block;
+            flex-direction: column;
+            margin: 0;
+            text-align: left;
+            background-color: #82b440;
+            padding: 24px;
+            font-size: 24px;
+    
+            img{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                right: 0;
+            }
     
             .title{
-                font-size: 2.625rem;
-                font-family: sharpe;
-                color: #ABA780;
-                margin-bottom: 2rem;
-            }
-    
-            .sub-title{
-                font-size: 1.375rem;
-                font-family: Canela;
+                font-size: 40px;
+                font-family: TT-Chocolate-bold;
                 color: #737373;
-    
-                .gold{
-                    color: #ABA780!important;
-                    margin-top: 4rem;
-                }
-            }
-    
-            .icon{
-                width: 60px;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 12px;
             }
     
             .description{ 
-                font-size: 11px;
-                color: #737373;
+                font-size: 24px;
+                color: #fff;
                 font-family: TT-Chocolate;
+                margin-bottom: 16px;
             }
     
-            .footer{
-                position: initial;
-                display: block;
-                width: 100%;
-                color: #737373;
-    
-                .left{
-                    padding: 1rem;
-                    margin: 1rem;
-                    font-family: TT-Chocolate;
-                    
-    
-                    h6{
-                        font-size: 11px;
-                        font-weight: 400;
-                        margin: 0;
-                        text-align: center;
-                    }
-    
-                    .email{
-                        font-size: 11px;
-                        font-weight: 400;
-                        margin: 0;
-                        text-align: center;
-                    }
-                }
-    
-                .right{
-                    margin: 0;
-                    display: flex;
-                    justify-content: center;
-                }
+            .button-learn-more {
+                padding: 12px;
+                background-color: #fff;
+                font-size: 24px;
+                color: #ed2b45;
+                border: 2px solid #ed2b45;
+                border-radius: 12px;
+                width: 180px;
             }
         }
     
         .content-right{
-            display: none;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+    
+            img {
+                width: 100%; /* Make the image width 100% of the container width */
+                height: 100%; /* Make the image height 100% of the container height */
+                object-fit: cover; /* Preserve the aspect ratio and cover the entire container */
+                display: block; /* Remove extra space below the image */
+              }
         }
     }
   }

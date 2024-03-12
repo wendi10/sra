@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { HomeModule } from './modules/landing/home.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { ProductCategoryComponent } from './components/product-category/product-category.component';
 
 
@@ -17,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

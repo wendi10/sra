@@ -1,0 +1,46 @@
+.galery-container {
+  padding: 150px 150px;
+
+  .title{
+    font-size: 40px;
+    font-family: TT-Chocolate-bold;
+    color: #737373;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .gallery-item {
+    a img{
+      width: 250px;
+      margin: 12px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1350px) {
+  .galery-container {
+    padding: 24px;
+    display: block;
+    width: 100%;
+  
+    .title{
+      font-size: 50px;
+      font-family: TT-Chocolate-bold;
+      color: #737373;
+      font-weight: 700;
+      text-align: center;
+    }
+  
+    .gallery-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      a img{
+        width: 150px;
+        margin: 12px;
+      }
+    }
+  }
+}

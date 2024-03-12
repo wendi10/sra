@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 
@@ -13,18 +14,11 @@ const routes: Routes = [
 			import('./modules/landing/home.module').then(
 				(module) => module.HomeModule
 			),
-	},
-	{
-		path: 'products',
-		loadChildren: () =>
-			import('./modules/products-by-category/products-by-category.module').then(
-				(module) => module.ProductsByCategoryModule
-			),
-	},
+	}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, routerOptions)],
+  imports: [CommonModule ,RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

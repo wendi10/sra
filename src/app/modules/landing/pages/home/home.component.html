@@ -1,33 +1,27 @@
-<div class="Home">
-  <app-header *ngIf="isMobile"></app-header>
-  <div class="section">
-    <app-landing></app-landing>
-  </div>
-  <div>
-    <app-header *ngIf="!isMobile"></app-header>
+<div class="Home parent">
+    <app-header [isMobile]="isMobile" ></app-header>
 
-    <div class="section" id="welcome">
+    <section class="section" id="section-1">
       <app-welcome-section></app-welcome-section>
-    </div>
+    </section>
 
-    <div class="section" id="category">
-      <app-product-category></app-product-category>
-    </div>
-
-    <div class="section" id="promotions">
-      <app-promotions></app-promotions>
-    </div>
-
-    <div class="section" id="know-us">
-      <app-know-us></app-know-us>
-    </div>
-
-    <div class="section" id="vision-mision">
-      <app-vision-mision></app-vision-mision>
-    </div>
-
-    <div class="section" id="about-us">
+    <section class="section" id="section-2">
       <app-about-us></app-about-us>
-    </div>
-  </div>
+    </section>
+
+    <section class="section" id="section-3">
+      <app-product></app-product>
+    </section>
+
+    <section class="section" id="section-4">
+      <app-galery></app-galery>
+    </section>
+
+    <section class="section" id="section-5">
+      <app-contact-us></app-contact-us>
+    </section>
+
 </div>
+
+
+

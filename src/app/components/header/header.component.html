@@ -1,32 +1,88 @@
-<div class="header">
-  <div class="d-flex flex-row align-items-center">
+<div *ngIf="!isMobile" class="header">
+  <div  class="d-flex flex-row align-items-center">
     <img class="" src="../../../assets/images/logo.png" />
 
     <div class="d-flex flex-row align-items-center justify-content-end w-100">
-      <a href="#welcome" class="menu">HOME</a>
-      <a href="#category" class="menu">PRODUCTS</a>
-      <a href="#know-us" class="menu">ABOUT US</a>
-      <a href="#promotions" class="menu">PROMOTIONS</a>
-    </div>
-  </div>
-
-  <input
-    [(ngModel)]="isChecked"
-    type="checkbox"
-    class="openSidebarMenu"
-    id="openSidebarMenu"
-  />
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <div class="main-content-wrapper">
-      <a (click)="onClickMenu()" href="#welcome">HOME</a>
-      <a (click)="onClickMenu()" href="#category">PRODUCTS</a>
-      <a (click)="onClickMenu()" href="#know-us">ABOUT US</a>
-      <a (click)="onClickMenu()" href="#promotions">PROMOTIONS</a>
+      <a
+        href="javascript:document.getElementById('section-1').scrollIntoView(true);"
+        class="menu"
+        >HOME</a
+      >
+      <a
+        href="javascript:document.getElementById('section-2').scrollIntoView(true);"
+        class="menu"
+        >ABOUT US</a
+      >
+      <a
+        href="javascript:document.getElementById('section-3').scrollIntoView(true);"
+        class="menu"
+        >PRODUCTS</a
+      >
+      <a
+        href="javascript:document.getElementById('section-4').scrollIntoView(true);"
+        class="menu"
+        >GALLERY</a
+      >
+      <a
+        href="javascript:document.getElementById('section-5').scrollIntoView(true);"
+        class="menu"
+        >CONTACT US</a
+      >
     </div>
   </div>
 </div>
+
+<div *ngIf="isMobile"  class="header">
+  <div class="d-flex space-between align-items-center">
+    <div class="d-flex align-items-center">
+    <img style="margin-right: 0;" class="mobile" src="../../../assets/images/logo.png" />
+
+    <div style="font-weight: 700; font-size: 24px">PT. BINTANG PINANG CEMERLANG</div>
+  </div>
+
+    <input
+      [(ngModel)]="isChecked"
+      type="checkbox"
+      class="openSidebarMenu"
+      id="openSidebarMenu"
+    />
+
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+
+    <div id="sidebarMenu">
+      <div class="main-content-wrapper">
+        <a
+          href="javascript:document.getElementById('section-1').scrollIntoView(true);"
+          class="menu"
+          >HOME</a
+        >
+        <a
+          href="javascript:document.getElementById('section-2').scrollIntoView(true);"
+          class="menu"
+          >ABOUT US</a
+        >
+        <a
+          href="javascript:document.getElementById('section-3').scrollIntoView(true);"
+          class="menu"
+          >PRODUCTS</a
+        >
+        <a
+          href="javascript:document.getElementById('section-4').scrollIntoView(true);"
+          class="menu"
+          >GALLERY</a
+        >
+        <a
+          href="javascript:document.getElementById('section-5').scrollIntoView(true);"
+          class="menu"
+          >CONTACT US</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+
