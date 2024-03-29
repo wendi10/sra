@@ -1,10 +1,46 @@
-# ProjectKevin2
+# DermaShare
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+
+Documentation:
+Folder Structure:
+--src
+--app
+--components //for shared component. if you want to add multiple shared folder, u can bundling it to folder shared
+
+        --core
+            --service // for all service
+                product.service.ts
+                ...
+
+            --modules
+                --home
+                    --components /module component
+                    --pages
+                    .home.module.ts
+                    .home.routing.ts
+                --products-by-category
+                    --components
+                    --pages
+                        products-by-category
+                        product-detail
+                    .products-by-category.module.ts
+                    .products-by-category.routing.ts
+                ...
+
+    --environments //if u need add to more than one env
+        --environment.ts //for development
+        --environment.prod.ts //for build prod
+        ...
+
+    --assets //share assets like fonts, images, etc.
+        --fonts
+        --images
+        ...
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

@@ -1,10 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+export const routerOptions: ExtraOptions = {
+	anchorScrolling: 'enabled',
+  }
+
+const routes: Routes = [
+	{
+		path: '',
+		pathMatch: 'full',
+		loadChildren: () =>
+			import('./modules/landing/home.module').then(
+				(module) => module.HomeModule
+			),
+	}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [CommonModule ,RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
