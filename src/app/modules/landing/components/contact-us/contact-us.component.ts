@@ -5,7 +5,7 @@ import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent implements OnInit {
   public formGroup: FormGroup = new FormGroup({
@@ -13,25 +13,40 @@ export class ContactUsComponent implements OnInit {
     phoneNumber: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     description: new FormControl(''),
-  })
+  });
 
-  constructor() { }
+  public isLoading: boolean = false;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
+
+  ngOnInit(): void {}
 
   sendEmail(): void {
-    emailjs.send('service_p34pd8r', 'template_xnrbphh', this.formGroup.getRawValue() , {
-      publicKey: 'Pywl9oQ86f6W_0ze6',
-    })
-    .then(
-      () => {
-        alert('Inquiry Sent!')
-      },
-      (error) => {
-        alert('Failed to send inquiry, please try again.')
-      },
-    );
+    this.isLoading = true;
+    emailjs
+      .send(
+        'service_49en3ts',
+        'template_hbyp3je',
+        this.formGroup.getRawValue(),
+        {
+          publicKey: 'KPO9IKNFSeZ05h_tp',
+        }
+      )
+      .then(
+        () => {
+          alert('Inquiry Sent!');
+          this.formGroup.patchValue({
+            fullname: '',
+            phoneNumber: '',
+            email: '',
+            description: '',
+          });
+          this.isLoading = false;
+        },
+        () => {
+          this.isLoading = false;
+          alert('Failed to send inquiry, please try again.');
+        }
+      );
   }
-
 }
