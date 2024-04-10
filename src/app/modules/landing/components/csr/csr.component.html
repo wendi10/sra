@@ -1,6 +1,6 @@
 <div class="csr">
   <div class="content">
-    <div class="" *ngIf="csr.type === 1 || (csr.type === 2 && isMobile)">
+    <div [ngClass]="isMobile ? '' : 'd-flex'"  *ngIf="csr.type === 1 || (csr.type === 2 && isMobile)">
       <div>
         <img [src]="csr.imgUrl" />
       </div>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="" *ngIf="csr.type === 2 && !isMobile">
+    <div [ngClass]="isMobile ? '' : 'd-flex'" *ngIf="csr.type === 2 && !isMobile">
       <div>
         <h2 class="title">
           {{ csr.title }}
