@@ -1,0 +1,32 @@
+<div class="Home parent">
+    <app-header [isMobile]="isMobile" ></app-header>
+
+    <section class="section" id="section-1">
+      <app-welcome-section></app-welcome-section>
+    </section>
+
+    <section class="section" id="section-2">
+      <app-about-us></app-about-us>
+    </section>
+
+    <section class="section" id="section-3">
+      <app-product></app-product>
+    </section>
+
+    <section class="section" id="section-4">
+      <app-galery></app-galery>
+    </section>
+
+    <div *ngIf="isMobile" class="title">CSR</div>
+    <section *ngFor="let data of csr; let index = index" class="section" id="section-6">
+      <app-csr [isMobile]="isMobile" [csr]="data"></app-csr>
+    </section>
+
+    <section class="section" id="section-5">
+      <app-contact-us></app-contact-us>
+    </section>
+
+</div>
+
+
+
